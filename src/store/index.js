@@ -1,9 +1,9 @@
 import { createStore, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import counter from './votes.js';
+import catReducer from './categories.js';
 
-let reducers = combineReducers({ counter });
+let reducers = combineReducers({ catReducer });
 
 const store = () => {
   return createStore(reducers, composeWithDevTools());
