@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "An E-Commerce storefront using React with Redux, coupled with its own live API server.",
   "main": "index.js",
+  "homepage": "/",
   "scripts": {
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
