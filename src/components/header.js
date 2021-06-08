@@ -1,10 +1,15 @@
 import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import { Typography } from '@material-ui/core';
+
 
 function Header() {
   return (
-    <header id="header">
-      <p>E-Store</p>
-    </header>
+    <AppBar position="static">
+      <Typography variant="h6">
+        <h1>Hot Threads</h1>
+      </Typography>
+    </AppBar>
   )
 }
 
