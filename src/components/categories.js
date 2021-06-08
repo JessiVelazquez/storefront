@@ -2,9 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { changeCategory, reset } from '../store/categories.js';
+import { catChange } from '../store/products.js';
 
 const Categories = props => {
-  console.log('propsCAT', props.catReducer);
+  console.log('ACTIVE', props.catReducer.activeCategory);
   return (
     <section>
       <h1>Categories</h1>
@@ -31,6 +32,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   changeCategory: (name) => dispatch(changeCategory(name)),
+  catChange: (name) => dispatch(catChange(name)),
   reset: () => dispatch(reset())
 });
 

@@ -30,7 +30,6 @@ export default (state = initialState, action) => {
   // let type = action.type;
   // let payload = action.payload;
 
-  console.log('CONS---', type, state, payload);
   switch(type) {
     case 'CHANGE CATEGORY':
       let activeCategory = payload;
@@ -46,7 +45,6 @@ export default (state = initialState, action) => {
 
 // an action creator is simply a function that returns an action
 export const changeCategory = (name) => {
-  console.log('NAME', name);
     // an action is simply an object literal with a type (to be evaluated in a reducer) and a payload (data)
     return {
       type: 'CHANGE CATEGORY',
