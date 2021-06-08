@@ -1,21 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import { changeCategory, reset } from '../store/categories.js';
 import { catChange } from '../store/products.js';
+import Tabs from '@material-ui/core/Tabs';
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
 
 const Categories = props => {
   console.log('ACTIVE', props.catReducer.activeCategory);
   return (
-    <section>
-      <h1>Categories</h1>
-      <ul>
+    <AppBar color="default" position="static">
+      <Tabs>
         {props.catReducer.categories.map(category => {
-          return <li onClick={() => props.changeCategory(category.name)}>{category.displayName}</li>
+          return (
+            <Button color="primary" onClick={() => props.changeCategory(category.name)}>{category.displayName}</Button>
+          )
         })}
-      </ul>
+      </Tabs>
       <p>Active Category: {props.catReducer.activeCategory}</p>
-    </section>
+    </AppBar>
   )
 }
 
