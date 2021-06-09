@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { catChange, reset } from '../store/products.js';
+import { increment } from '../store/simplecart.js';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Products = props => {
   const classes = useStyles();
-  console.log('PROD---', props.prodReducer);
+  console.log(props.cartReducer.cartItems);
   return (
     <Container className={classes.cardGrid} maxWidth="xs">
       <Grid container spacing={4}>
@@ -56,8 +57,8 @@ const Products = props => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary">
-                  Purchase for {product.price}!
+                <Button size="small" color="primary" onClick={() => props.increment(product.name)}>
+                  Add to Cart!
                 </Button>
               </CardActions>
             </Card>
@@ -71,47 +72,15 @@ const Products = props => {
 
 const mapStateToProps = state => ({
   prodReducer: state.prodReducer,
-  catReducer: state.catReducer
+  catReducer: state.catReducer,
+  cartReducer: state.cartReducer
 })
 
 const mapDispatchToProps = dispatch => ({
   catChange: (name) => dispatch(catChange(name)),
-  reset: () => dispatch(reset())
+  reset: () => dispatch(reset()),
+  increment: (product) => dispatch(increment(product))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Products);
 
-
-
-// export default function MediaCard() {
-//   const classes = useStyles();
-
-//   return (
-//     <Card className={classes.root}>
-//       <CardActionArea>
-//         <CardMedia
-//           className={classes.media}
-//           image="/static/images/cards/contemplative-reptile.jpg"
-//           title="Contemplative Reptile"
-//         />
-//         <CardContent>
-//           <Typography gutterBottom variant="h5" component="h2">
-//             Lizard
-//           </Typography>
-//           <Typography variant="body2" color="textSecondary" component="p">
-//             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-//             across all continents except Antarctica
-//           </Typography>
-//         </CardContent>
-//       </CardActionArea>
-//       <CardActions>
-//         <Button size="small" color="primary">
-//           Share
-//         </Button>
-//         <Button size="small" color="primary">
-//           Learn More
-//         </Button>
-//       </CardActions>
-//     </Card>
-//   );
-// }

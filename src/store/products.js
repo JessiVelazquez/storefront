@@ -1,5 +1,3 @@
-import products from "../components/products";
-
 // setup of initial state
 let initialState = {
   products: [

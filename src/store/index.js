@@ -3,8 +3,9 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import catReducer from './categories.js';
 import prodReducer from './products.js';
+import cartReducer from './simplecart.js';
 
-let reducers = combineReducers({ catReducer, prodReducer });
+let reducers = combineReducers({ catReducer, prodReducer, cartReducer });
 
 const store = () => {
   return createStore(reducers, composeWithDevTools());
