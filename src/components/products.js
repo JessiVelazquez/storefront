@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { catChange, reset } from '../store/products.js';
-import { increment } from '../store/simplecart.js';
+import { addItem } from '../store/simplecart.js';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -57,7 +57,7 @@ const Products = props => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary" onClick={() => props.increment(product.name)}>
+                <Button size="small" color="primary" onClick={() => props.addItem(product)}>
                   Add to Cart!
                 </Button>
               </CardActions>
@@ -79,7 +79,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   catChange: (name) => dispatch(catChange(name)),
   reset: () => dispatch(reset()),
-  increment: (product) => dispatch(increment(product))
+  addItem: (product) => dispatch(addItem(product))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Products);
