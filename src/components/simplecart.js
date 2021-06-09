@@ -4,6 +4,7 @@ import { catChange, reset } from '../store/products.js';
 import { increment } from '../store/simplecart.js';
 
 function SimpleCart(props) {
+  console.log(props.cartReducer.cartList);
   return (
     <section>
       <p>{props.cartReducer.cartItems}</p>
