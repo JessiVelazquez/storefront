@@ -10,3 +10,9 @@ PR: [https://github.com/JessiVelazquez/storefront/pull/9](https://github.com/Jes
 ## Overview and Description
 
 An E-Commerce storefront using React with Redux, coupled with its own live API server.
+
+
+## UML
+
+![UML](./UML.png)
+
