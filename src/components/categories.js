@@ -7,7 +7,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 
 const Categories = props => {
-  console.log('ACTIVE', props.catReducer.activeCategory);
   return (
     <AppBar color="default" position="static">
       <Tabs>
@@ -17,7 +16,6 @@ const Categories = props => {
           )
         })}
       </Tabs>
-      <p>Active Category: {props.catReducer.activeCategory}</p>
     </AppBar>
   )
 }

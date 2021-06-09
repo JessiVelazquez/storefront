@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <Header />
-      {/* <SimpleCart /> */}
       <Categories />
+      <SimpleCart />
       <Products />
       <Footer />
     </>
