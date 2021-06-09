@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { catChange, reset } from '../store/products.js';
-import { addItem } from '../store/simplecart.js';
+import { increment, addItem } from '../store/simplecart.js';
 import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -30,11 +30,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+// onClick={() => props.increment(product)}
+
 const Products = props => {
   const classes = useStyles();
   console.log(props.cartReducer.cartItems);
   return (
     <Container className={classes.cardGrid} maxWidth="xs">
+      <h1>{props.catReducer.activeCategory}</h1>
       <Grid container spacing={4}>
         {props.prodReducer.products.map(product => {
           if (product.categoryAss === props.catReducer.activeCategory)
@@ -79,7 +82,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   catChange: (name) => dispatch(catChange(name)),
   reset: () => dispatch(reset()),
-  addItem: (product) => dispatch(addItem(product))
+  addItem: (product) => dispatch(addItem(product)),
+  // increment: (product) => dispatch(increment(product))
+  
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Products);

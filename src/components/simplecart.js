@@ -1,14 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { catChange, reset } from '../store/products.js';
-import { increment } from '../store/simplecart.js';
+import { addItem } from '../store/simplecart.js';
 
 function SimpleCart(props) {
-  console.log(props.cartReducer.cartList);
+  console.log('LIST--', props.cartReducer.cartList);
   return (
-    <section>
-      <p>{props.cartReducer.cartItems}</p>
-    </section>
+    <>
+      <h3>Items in Cart:</h3>
+      <div>
+        {props.cartReducer.cartList.map(product => {
+          return (
+            <ul>{product.name}: {product.price}</ul>
+          )
+        })}
+      </div>
+    </>
   )
 }
 
@@ -21,7 +28,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   catChange: (name) => dispatch(catChange(name)),
   reset: () => dispatch(reset()),
-  increment: (product) => dispatch(increment(product))
+  addItem: (product) => dispatch(addItem(product))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SimpleCart);

@@ -23,7 +23,7 @@ let initialState = {
       description: `A sweater`,
       price: '$65',
       inventoryCount: '45',
-      image: 'https://lh3.googleusercontent.com/proxy/qS4CIPdx-WZVI7VZaBgs3drkJEiGZa8oJ4AM-WdzVCfm4CeOA0k9Jc2KX6HEtSjOxzMrJDjBKHK5JDEs2UWZHclyHvtqVzBSs3LrouZE228RrHJql1uqvZ_3VZkJpj1W8sYNaUPG'
+      image: 'https://ae01.alicdn.com/kf/Hcee760e999de4c5f876f700a554c24c0w/Women-Solid-Beige-Hollow-Sweater-2021-Spring-Lady-Thin-Hole-Split-Knitwear-Cool-Hipster-Gothic-O.jpg_Q90.jpg_.webp'
     },
     { 
       categoryAss: 'Mens',
