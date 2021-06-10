@@ -36,6 +36,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Products = props => {
   console.log('API-PRODUCTS', props.apiReducer.results);
+  let regex = /[^!]*/;
+
   const fetchData = (e) => {
     e && e.preventDefault();
     props.get();
@@ -53,7 +55,7 @@ const Products = props => {
       <h1>{props.catReducer.activeCategory}</h1>
       <Grid container spacing={4}>
         {props.apiReducer.results.map(product => {
-          // if (product.categoryAss === props.catReducer.activeCategory)
+          if (product.category === props.catReducer.activeCategory)
           return (
             <Grid item key={product._id} className={classes.gridItem}>
             <Card className={classes.card}>
@@ -65,7 +67,7 @@ const Products = props => {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    {product.name} {product.price}
+                    {product.name} ${product.price}
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
                     {product.description}
