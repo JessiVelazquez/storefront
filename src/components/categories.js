@@ -20,17 +20,11 @@ const Categories = props => {
   )
 }
 
-// this method needs to be called "mapStateToProps"
-// and it does EXACTLY that -> it maps the state of our app (handled in redux) to a prop
-// reference: props.counter above -> this is the same as this.state.counter
 const mapStateToProps = state => ({
   catReducer: state.catReducer
 })
 
-// const mapDispatchToProps = dispatch => { changeCategory, reset }
-
-// the following is the same as the shorthand version above:
-
+//could also write as one line: 'const mapDispatchToProps = { changeCategory, catChange, reset }
 const mapDispatchToProps = dispatch => ({
   changeCategory: (name) => dispatch(changeCategory(name)),
   catChange: (name) => dispatch(catChange(name)),

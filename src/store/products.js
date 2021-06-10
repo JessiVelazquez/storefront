@@ -76,6 +76,7 @@ let initialState = {
   ],
 }
 
+//--------------REDUCER----------------\\
 export default (state = initialState, action) => {
   let { type, payload } = action;
 
@@ -89,6 +90,7 @@ export default (state = initialState, action) => {
   }
 }
 
+//------------ACTIONS--------------------\\
 export const catChange = (category) => {
   return {
     type: 'CHANGE ACTIVE CATEGORY',
