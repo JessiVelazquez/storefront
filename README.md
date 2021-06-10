@@ -4,7 +4,7 @@ Author: Jessi Velazquez
 
 Deployed Link: [https://jessi-storefront.herokuapp.com/](https://jessi-storefront.herokuapp.com/)
 
-PR: [https://github.com/JessiVelazquez/storefront/pull/9](https://github.com/JessiVelazquez/storefront/pull/9)
+PR: [https://github.com/JessiVelazquez/storefront/pull/12](https://github.com/JessiVelazquez/storefront/pull/12)
 
 
 ## Overview and Description

@@ -2,18 +2,33 @@
 let initialState = {
   categories: [
     { 
-      name: 'Womens',
-      displayName: 'Womens',
+      name: 'electronics',
+      displayName: 'electronics',
       description: `A collection of women's fashion`
     },
     { 
-      name: 'Mens',
-      displayName: 'Mens',
+      name: 'food',
+      displayName: 'food',
       description: `A collection of men's fashion`
     },
     {
-      name: 'Accessories',
-      displayName: 'Accessories',
+      name: 'console',
+      displayName: 'console',
+      description: `A collection of fashion accessories`
+    },
+    {
+      name: 'mobile',
+      displayName: 'mobile',
+      description: `A collection of fashion accessories`
+    },
+    {
+      name: 'phones',
+      displayName: 'phones',
+      description: `A collection of fashion accessories`
+    },
+    {
+      name: 'shirts',
+      displayName: 'shirts',
       description: `A collection of fashion accessories`
     }
   ],

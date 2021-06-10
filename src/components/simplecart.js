@@ -11,7 +11,7 @@ function SimpleCart(props) {
       <div>
         {props.cartReducer.cartList.map(product => {
           return (
-            <ul>{product.name}: {product.price}</ul>
+            <ul>{product.name}: ${product.price}</ul>
           )
         })}
       </div>
