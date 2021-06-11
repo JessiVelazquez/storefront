@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Products = props => {
-  console.log('API-PRODUCTS', props.apiReducer.results);
+  console.log('API-PRODUCTS', props.apiReducer);
   let regex = /[^!]*/;
 
   const fetchData = (e) => {
