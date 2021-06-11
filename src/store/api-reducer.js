@@ -7,7 +7,7 @@ export default (state = initialState, action) => {
 
   switch(type) {
     case 'GET':
-      return payload;
+      return {...state, results: payload};
 
     case 'POST':
       return payload;
