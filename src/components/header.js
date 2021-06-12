@@ -33,7 +33,7 @@ function Header(props) {
           <Typography id="headerTitle" variant="h6" className={classes.title}>
             Hot Threads
           </Typography>
-          <Button id="cartButton" color="inherit">Cart({props.cartReducer.cartList.length})</Button>
+          <NavLink to="/cart" id="cartButton" color="inherit">Cart({props.cartReducer.cartList.length})</NavLink>
           <Button color="inherit">
           <NavLink to=''>Home</NavLink>
           </Button>
