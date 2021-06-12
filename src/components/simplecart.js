@@ -44,7 +44,7 @@ function SimpleCart(props) {
                     className={classes.inline}
                     color="textPrimary"
                     >
-                      {product.price}
+                      ${product.price}
                     </Typography>
                   </React.Fragment>
                 }
