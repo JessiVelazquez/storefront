@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import { Typography } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
@@ -33,6 +34,9 @@ function Header(props) {
             Hot Threads
           </Typography>
           <Button id="cartButton" color="inherit">Cart({props.cartReducer.cartList.length})</Button>
+          <Button color="inherit">
+          <NavLink to=''>Home</NavLink>
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
