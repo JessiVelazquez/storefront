@@ -14,7 +14,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
+import CardHeader from '@material-ui/core/CardHeader';
+import { FormHelperText } from '@material-ui/core';
 
 
 
@@ -29,15 +30,19 @@ const useStyles = makeStyles((theme) => ({
     height: 550,
     padding: 20,
     margin: 20,
-    // flexDirection: 'column',
   },
   media: {
     padding: '50%',
+    marginRight: 50,
     height: 100,
-    width: 50,
   },
   content: {
     height: 300,
+  },
+  categoryName: {
+    textAlign: 'center',
+    fontSize: 36,
+    fontFamily: 'monospace',
   }
 }));
 
@@ -60,13 +65,11 @@ const Products = props => {
 
   //--------working to get API rendering------------\\
   return (
-    <Container  maxWidth="md">
-      <h1>{props.catReducer.activeCategory}</h1>
-      {/* <Grid container spacing={4}> */}
+    <Container className={classes.root} maxWidth="md">
+      <Typography className={classes.categoryName}>{props.catReducer.activeCategory}</Typography>
         {props.apiReducer.results.map(product => {
           if (product.category === props.catReducer.activeCategory)
           return (
-            // <Grid item key={product._id} className={classes.gridItem}>
             <Card className={classes.card}>
               <CardActionArea>
                 <CardMedia
@@ -98,10 +101,8 @@ const Products = props => {
                 </Button>
               </CardActions>
             </Card>
-            // </Grid>
           )
         })}
-      {/* </Grid> */}
     </Container>
   )
 }

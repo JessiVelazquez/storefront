@@ -13,11 +13,20 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  bar: {
+    backgroundColor: '#FE6B8B',
+    height: 120,
+    borderWidth: 2,
+    borderColor: 'black',
+    borderStyle: 'solid',
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
+    fontFamily: 'monospace',
+    color: 'black',
   },
 }));
 
@@ -29,8 +38,8 @@ function Header(props) {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
-          <Typography id="headerTitle" variant="h6" className={classes.title}>
+        <Toolbar className={classes.bar}>
+          <Typography id="headerTitle" variant="h3" className={classes.title}>
             Hot Threads
           </Typography>
           <NavLink to="/cart" id="cartButton" color="inherit">Cart({props.cartReducer.cartList.length})</NavLink>

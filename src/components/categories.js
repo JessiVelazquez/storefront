@@ -5,14 +5,23 @@ import { catChange } from '../store/products.js';
 import Tabs from '@material-ui/core/Tabs';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  buttonBar: {
+    backgroundColor: '#c7c8f0',
+  },
+}));
 
 const Categories = props => {
+  const classes = useStyles();
+
   return (
-    <AppBar color="default" position="static">
+    <AppBar className={classes.buttonBar}color="default" position="static">
       <Tabs>
         {props.catReducer.categories.map(category => {
           return (
-            <Button color="primary" onClick={() => props.changeCategory(category.name)}>{category.displayName}</Button>
+            <Button color="default" onClick={() => props.changeCategory(category.name)}>{category.displayName}</Button>
           )
         })}
       </Tabs>

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     maxWidth: '36ch',
-    backgroundColor: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    backgroundColor: 'transparent',
     marginLeft: 100,
   },
   inline: {
@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   cart: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     margin: 100,
+    borderWidth: 3,
+    borderColor: 'black',
+    borderStyle: 'solid',
   },
   total: {
     marginLeft: 100,
@@ -31,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function SimpleCart(props) {
-  console.log('CART LIST', props.cartReducer.cartList)
 
   function totalCost(arr) {
     let total = 0;
