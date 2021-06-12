@@ -9,7 +9,9 @@ import SimpleCart from './components/simplecart.js';
 import Details from './components/prodDetails.js';
 import App from './app.js';
 
+
 function Main() {
+
   return (
     <BrowserRouter>
       <Header />
