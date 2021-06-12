@@ -6,9 +6,10 @@ import catReducer from './categories.js';
 import prodReducer from './products.js';
 import cartReducer from './simplecart.js';
 import apiReducer from './api-reducer';
+import detailReducer from './prodDetails.js';
 
 
-let reducers = combineReducers({ catReducer, prodReducer, cartReducer, apiReducer });
+let reducers = combineReducers({ catReducer, prodReducer, cartReducer, apiReducer, detailReducer });
 
 const store = () => {
   return createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
