@@ -8,6 +8,7 @@ import Header from './components/header.js';
 import Footer from './components/footer.js';
 import SimpleCart from './components/simplecart.js';
 import Details from './components/prodDetails.js';
+import Cart from './components/cart.js';
 
 function App(props) {
   return (
@@ -23,6 +24,9 @@ function App(props) {
           path={`/details/:${props.prodReducer._id}`}
           component={(props) => <Details {...props} />}
           >
+        </Route>
+        <Route exact path="/cart">
+          <Cart />
         </Route>
       </Switch>
     </>
