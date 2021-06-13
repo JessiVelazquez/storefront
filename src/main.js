@@ -16,7 +16,7 @@ function Main() {
     <BrowserRouter>
       <Header />
       <App />
-      <Footer />
+      <Footer id="footer"/>
     </BrowserRouter>
   )
 }

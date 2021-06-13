@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   buttonBar: {
-    backgroundColor: '#c7c8f0',
+    backgroundColor: '#fcbbc9',
   },
 }));
 
@@ -17,7 +17,7 @@ const Categories = props => {
   const classes = useStyles();
 
   return (
-    <AppBar className={classes.buttonBar}color="default" position="static">
+    <AppBar className={classes.buttonBar} id="catBar" color="default" position="fixed">
       <Tabs>
         {props.catReducer.categories.map(category => {
           return (
