@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     background: 'linear-gradient(45deg, #ff9cb1 30%, #ffd2ba 90%)',
     marginTop: 180,
-    marginLeft: 165,
+    marginLeft: 169,
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
@@ -51,7 +51,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'monospace',
   },
   prodText: {
-    fontSize: 18,
+    fontSize: 15,
+  },
+  cardButton: {
+    fontSize: 11,
+  },
+  desc: {
+    fontSize: 12,
   }
 }));
 
@@ -84,19 +90,19 @@ const Products = props => {
                   title="image thumbnail"
                 />
                 <CardContent>
-                  <Typography className={classes.prodText} gutterBottom variant="h5" component="h2">
+                  <Typography className={classes.prodText} gutterBottom component="h2">
                     {product.name} ${product.price}
                   </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
+                  <Typography className={classes.desc} variant="body2" color="textSecondary" component="p">
                     {product.description}
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary" onClick={() => props.addItem(product)}>
+                <Button className={classes.cardButton} size="small" color="primary" onClick={() => props.addItem(product)}>
                   Add to Cart!
                 </Button>
-                <Button size="small" color="primary" onClick={(product) => props.selectProduct(product)}>
+                <Button className={classes.cardButton} size="small" color="primary" onClick={(product) => props.selectProduct(product)}>
                   <NavLink to={{
                     pathname: `/details/:${product._id}`,
                     state: product,

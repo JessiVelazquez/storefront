@@ -15,7 +15,7 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'fixed',
-    width: 155,
+    width: 160,
     maxWidth: '36ch',
     background: 'linear-gradient(45deg, #ff9cb1 30%, #ffd2ba 90%)',
     zIndex: 1000,
