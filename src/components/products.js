@@ -21,9 +21,13 @@ import { FormHelperText } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    width: '100%',
     background: 'linear-gradient(45deg, #ff9cb1 30%, #ffd2ba 90%)',
     marginTop: 180,
     marginLeft: 165,
+    borderWidth: 1.5,
+    borderColor: 'gray',
+    borderStyle: 'solid',
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
