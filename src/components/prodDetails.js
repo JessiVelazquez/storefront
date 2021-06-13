@@ -64,14 +64,14 @@ const mapStateToProps = state => ({
   catReducer: state.catReducer,
   cartReducer: state.cartReducer,
   apiReducer: state.apiReducer,
-  detailReducer: state.detailReducer
+  // detailReducer: state.detailReducer
 })
 
 const mapDispatchToProps = (dispatch, getState) => ({
   get: () => dispatch(actions.getRemoteData()),
   reset: () => dispatch(reset()),
   addItem: (product) => dispatch(addItem(product)),
-  selectedProduct: (product) => dispatch(selectedProduct(product)),  
+  // selectedProduct: (product) => dispatch(selectedProduct(product)),  
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Details);

@@ -18,6 +18,19 @@ export default (state = initialState, action) => {
         cartItems: state.cartItems++
       };
       return newState;
+
+    case 'REMOVE':
+      const cartList = [...state.cartList]
+      let deleteItem = true;
+      const updatedCart = cartList.filter((item) => {
+        if (item === payload && deleteItem) {
+          deleteItem = false;
+          return false;
+        } else {
+          return true;
+        }
+      })
+      return {...state, cartList: [...updatedCart]}
     
     case 'RESET':
       return initialState;
@@ -39,6 +52,13 @@ export const addItem = (product) => {
 export const increment = (product) => {
   return {
     type: 'ADD',
+    payload: product
+  }
+}
+
+export const remove = (product) => {
+  return {
+    type: 'REMOVE',
     payload: product
   }
 }
