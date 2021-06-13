@@ -20,21 +20,26 @@ import { FormHelperText } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    background: 'linear-gradient(45deg, #ff9cb1 30%, #ffd2ba 90%)',
+    marginTop: 180,
+    marginLeft: 165,
+  },
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(20),
   },
   card: {
     display: 'inline-block',
-    width: 300,
-    height: 550,
+    width: 200,
+    height: 400,
     padding: 20,
     margin: 20,
   },
   media: {
     padding: '50%',
     marginRight: 50,
-    height: 100,
+    height: 50,
   },
   content: {
     height: 300,
@@ -43,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontSize: 36,
     fontFamily: 'monospace',
+  },
+  prodText: {
+    fontSize: 20,
   }
 }));
 
@@ -78,7 +86,7 @@ const Products = props => {
                   title="image thumbnail"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography className={classes.prodText} gutterBottom variant="h5" component="h2">
                     {product.name} ${product.price}
                   </Typography>
                   <Typography variant="body2" color="textSecondary" component="p">

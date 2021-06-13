@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     maxWidth: 400,
     padding: 50,
     margin: 50,
+    marginTop: 150,
   },
 });
 

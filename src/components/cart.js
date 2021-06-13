@@ -22,11 +22,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline',
   },
   cart: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    background: 'linear-gradient(45deg, #ff9cb1 30%, #ffd2ba 90%)',
     margin: 100,
     borderWidth: 3,
     borderColor: 'black',
     borderStyle: 'solid',
+    marginTop: 200,
   },
   total: {
     marginLeft: 100,

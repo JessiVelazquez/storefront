@@ -13,13 +13,23 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    position: 'fixed',
+    width: 155,
     maxWidth: '36ch',
-    backgroundColor: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    background: 'linear-gradient(45deg, #ff9cb1 30%, #ffd2ba 90%)',
+    zIndex: 1000,
+    borderWidth: 1.5,
+    borderColor: 'black',
+    borderStyle: 'solid',
+    fontSize: 10,
+    paddingLeft: 5,
   },
   inline: {
     display: 'inline',
   },
+  cartText: {
+    fontSize: 10,
+  }
 }));
 
 function SimpleCart(props) {
@@ -35,6 +45,7 @@ function SimpleCart(props) {
                 <Avatar alt="Remy Sharp" src={product.image}/>
               </ListItemAvatar>
               <ListItemText
+                className={classes.cartText}
                 primary={product.name}
                 secondary={
                   <React.Fragment>
@@ -50,7 +61,6 @@ function SimpleCart(props) {
                 }
               />
             </ListItem>
-            // <ul>{product.name}: ${product.price}</ul>
           )
         })}
       </List>

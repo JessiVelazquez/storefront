@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   bar: {
-    backgroundColor: '#FE6B8B',
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     height: 120,
     borderWidth: 2,
     borderColor: 'black',
@@ -37,7 +37,7 @@ function Header(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar className={classes.bar}>
           <Typography id="headerTitle" variant="h3" className={classes.title}>
             Hot Threads
