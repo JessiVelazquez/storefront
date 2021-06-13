@@ -14,6 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#c7e6f0',
+    width: '100%',
   }
 }));
 
@@ -23,7 +24,7 @@ function App(props) {
   return (
     <>
       <Switch>
-        <Route exact path="/">
+        <Route className={classes.root} exact path="/">
           <Categories />
           <SimpleCart />
           <Products />

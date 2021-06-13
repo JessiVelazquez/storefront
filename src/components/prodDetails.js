@@ -16,6 +16,10 @@ const useStyles = makeStyles({
     padding: 50,
     margin: 50,
     marginTop: 150,
+    background: 'linear-gradient(45deg, #ff9cb1 30%, #ffd2ba 90%)',
+    borderWidth: 4,
+    borderColor: 'white',
+    borderStyle: 'solid',
   },
 });
 
@@ -38,8 +42,8 @@ const Details = (props) => {
           <Typography gutterBottom variant="h5" component="h2">
             {selectedProduct.name}
           </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
-            {selectedProduct.price}
+          <Typography gutterBottom variant="h5" variant="h6" component="h2">
+            ${selectedProduct.price}.00
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {selectedProduct.description}
@@ -49,9 +53,6 @@ const Details = (props) => {
       <CardActions>
         <Button size="small" color="primary" onClick={() => props.addItem(selectedProduct)}>
           Add to Cart!
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
         </Button>
       </CardActions>
     </Card>

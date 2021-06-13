@@ -8,14 +8,23 @@ import Footer from './components/footer.js';
 import SimpleCart from './components/simplecart.js';
 import Details from './components/prodDetails.js';
 import App from './app.js';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: '#c7e6f0',
+    width: '100%',
+  }
+}));
 
 
 function Main() {
+  const classes = useStyles();
 
   return (
     <BrowserRouter>
       <Header />
-      <App />
+      <App className={classes.root} />
       <Footer id="footer"/>
     </BrowserRouter>
   )
