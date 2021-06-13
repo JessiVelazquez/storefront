@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inline: {
     display: 'inline',
+    marginRight: 120,
   },
   cart: {
     background: 'linear-gradient(45deg, #ff9cb1 30%, #ffd2ba 90%)',
@@ -34,13 +35,16 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 100,
   },
   button: {
-    marginLeft: 20,
+    marginLeft: 0,
     paddingLeft: 25,
     paddingRight: 25,
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     borderWidth: 1.5,
     borderColor: 'white',
     borderStyle: 'solid',
+  },
+  item: {
+    width: 500,
   }
 }));
 
@@ -65,7 +69,7 @@ function SimpleCart(props) {
           Items in Cart:
           {props.cartReducer.cartList.map(product => {
             return (
-              <ListItem alignItems="flex-start">
+              <ListItem className={classes.item} alignItems="flex-start">
                 <ListItemAvatar>
                   <Avatar alt="Remy Sharp" src={product.image}/>
                 </ListItemAvatar>

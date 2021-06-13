@@ -25,9 +25,6 @@ const useStyles = makeStyles((theme) => ({
     background: 'linear-gradient(45deg, #ff9cb1 30%, #ffd2ba 90%)',
     marginTop: 180,
     marginLeft: 165,
-    borderWidth: 1.5,
-    borderColor: 'gray',
-    borderStyle: 'solid',
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
@@ -54,15 +51,12 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'monospace',
   },
   prodText: {
-    fontSize: 20,
+    fontSize: 18,
   }
 }));
 
 
 const Products = props => {
-  console.log('API-PRODUCTS', props.apiReducer);
-  console.log('SEL PROD', props.detailReducer);
-  let regex = /[^!]*/;
 
   const fetchData = (e) => {
     e && e.preventDefault();
