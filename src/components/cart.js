@@ -11,6 +11,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,6 +46,18 @@ const useStyles = makeStyles((theme) => ({
   },
   item: {
     width: 500,
+  },
+  form: {
+    padding: 30,
+  },
+  orderButton: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    borderWidth: 1.5,
+    borderColor: 'white',
+    borderStyle: 'solid',
+    padding: 10,
+    marginLeft: 30,
+    marginTop: 15,
   }
 }));
 
@@ -96,6 +109,49 @@ function SimpleCart(props) {
           })}
         </List>
         <List className={classes.total}>Total Cost: ${cartTotal}.00</List>
+        <form className={classes.form} noValidate autoComplete="off">
+            <div>
+              <Typography variant="h5" component="h2">
+                Billing Info
+              </Typography>
+              <TextField required id="standard-required" label="Full Name"/>
+              <TextField
+                id="standard-address-input"
+                label="Address"
+                type="address"
+                autoComplete="current-address"
+              />
+              <TextField
+                id="standard-read-only-input"
+                label="City"
+                InputProps={{
+                  readOnly: true,
+                }}
+              />
+              <TextField
+                id="standard-state-input"
+                label="State"
+              />
+              <TextField id="standard-search" label="Zip Code" />
+              <TextField
+                id="standard-credit-card"
+                label="Credit Card #"
+              />
+                <TextField
+                id="standard-exp-date"
+                label="Expiration Date"
+                type="date"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+              />
+              <TextField
+                id="standard-CVV"
+                label="CVV"
+              />
+            </div>
+          </form>
+          <Button className={classes.orderButton}>Place Your Order</Button>
       </List>
     </>
   )
