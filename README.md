@@ -2,7 +2,7 @@
 
 Author: Jessi Velazquez
 
-Deployed Link: [https://jessi-storefront.herokuapp.com/](https://jessi-storefront.herokuapp.com/)
+Deployed Link: [https://storefront-jessi.herokuapp.com/](https://storefront-jessi.herokuapp.com/)
 (if this link throws an error, please try refreshing - Heroku Links seem to be finicky coming out of README files on Github)
 
 PR: [https://github.com/JessiVelazquez/storefront/pull/24](https://github.com/JessiVelazquez/storefront/pull/24)
