@@ -3,12 +3,12 @@ let initialState = {
   categories: [
     { 
       name: 'Womens',
-      displayName: 'Womens',
+      displayName: 'Women',
       description: `A collection of women's fashion`
     },
     { 
       name: 'Mens',
-      displayName: 'Mens',
+      displayName: 'Men',
       description: `A collection of men's fashion`
     },
     {
