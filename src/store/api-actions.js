@@ -1,10 +1,7 @@
 import superagent from 'superagent';
 
-// let api = 'https://jessi-api-server.herokuapp.com/store';
-let api = 'http://localhost:3000/store';
-
-//cokos API
-// let api = 'https://api-js401.herokuapp.com/api/v1/products'; 
+let api = 'https://api-server-jessi.herokuapp.com/store';
+// let api = 'http://localhost:3000/store';
 
 export const getRemoteData = () => dispatch => {
   return superagent.get(api)
