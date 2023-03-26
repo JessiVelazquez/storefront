@@ -39,9 +39,11 @@ function Header(props) {
     <div className={classes.root}>
       <AppBar position="fixed">
         <Toolbar className={classes.bar}>
-          <Typography id="headerTitle" variant="h3" className={classes.title}>
-            Hot Threads
-          </Typography>
+          <NavLink to=''>
+            <Typography id="headerTitle" variant="h3" className={classes.title}>
+              Hot Threads
+            </Typography>
+          </NavLink>
           <NavLink to="/cart" id="cartButton" color="inherit">Cart({props.cartReducer.cartList.length})</NavLink>
           <Button color="inherit">
           <NavLink to=''>Home</NavLink>
